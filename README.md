@@ -15,11 +15,6 @@ This project generates the following interactive plots:
 *   **Implied Volatility Surface (3D):** A 3D surface plot showing implied volatility as a function of strike price and days to expiration. This helps in visualizing the volatility smile and term structure.
 *   **Option Price Scatter (3D):** A 3D scatter plot showing the last price of options as a function of strike price and days to expiration.
 
-*(Suggestion: You can add screenshots of your generated plots here to give a preview.)*
-
-**Example:**
-`![IV Surface](path/to/your/screenshot.png)`
-
 ## How to Use
 
 1.  **Clone the repository:**
@@ -28,18 +23,15 @@ This project generates the following interactive plots:
     cd SPY-implied-vol
     ```
 
-2.  **Open the project in RStudio:**
-    Open the `SPY-implied-vol.Rproj` file.
-
-3.  **Install dependencies:**
-    You will need to have R installed. Run the following command in the R console to install the necessary packages (you may need to add or remove packages depending on your script).
+2.  **Install dependencies:**
+    You will need to have R installed. Run the following command in the R console to install the necessary packages.
     ```r
     # Likely packages used, please verify from your R script
-    install.packages(c("plotly", "httr", "jsonlite", "RQuantLib"))
+    install.packages(c("plotly", "quantmod", "tidyverse", "janitor", "akima"))
     ```
 
 4.  **Run the analysis:**
-    Source the main R script (e.g., `main.R`) that generates the data and plots.
+    Run the R markdown notebook `implied_volatility.R` to create the 4 visualizations.
 
 5.  **View the output:**
     The generated interactive HTML plots can be found in the `src/` directory. Open them in any web browser.
